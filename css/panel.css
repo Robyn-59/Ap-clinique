@@ -1,0 +1,507 @@
+@import url('initialisations.css');
+
+.en-tete {
+    margin: 10px auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    color: var(--c-blue);
+    font-weight: 600;
+}
+
+.en-tete svg {
+    width: 50px;
+    height: 50px;
+    fill: var(--c-blue);  
+}
+
+.level {
+    margin: 50px auto;
+    display: flex;
+    width: 600px;
+    height: 100px;
+}
+
+.lvl1 {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.lvl2 {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.lvl3 {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.lvl4 {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.bulle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    border: solid 2px black;
+}
+
+.active-bulle {
+    border: solid 2px var(--c-blue);
+    color: var(--c-blue);
+}
+
+.bulle-passe {
+    border: solid 2px #476ae6;
+    background-color: #476ae6;
+    color: var(--c-blue);
+}
+
+.texte-passe {
+    color: #476ae6;
+}
+
+.bulle-passe p {
+    color: white;
+}
+
+.bulle p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.bulle-texte {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.active-texte {
+    color: var(--c-blue);
+}
+
+.ligne {
+    margin: 25px 0 0 0;
+    width: 200px;
+    height: 2px;
+    background-color: black;
+}
+
+
+
+
+
+form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    padding: 1rem;
+}
+
+form h2 {
+    color: var(--c-blue);
+}
+
+label {
+    margin: 10px 10px;
+}
+
+.grand {
+    width: 100%;
+    max-width: 900px;
+    height: 45px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 20px rgb(153 153 153 / 25%);
+}
+
+.moyen {
+    width: 100%;
+    max-width: 500px;
+    height: 45px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 20px rgb(153 153 153 / 25%);
+}
+
+.petit {
+    width: 100%;
+    max-width: 200px;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 20px rgb(153 153 153 / 25%);
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+input[type='submit'] {
+    margin: 50px 0;
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    height: 55px;
+    background-color: white;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background: var(--c-blue);
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+input[type=file] {
+    display:none;
+}
+
+label.file {
+    margin: 15px auto 0;
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: all .5s;
+    box-shadow: 5px 5px 20px rgb(153 153 153 / 25%);
+}
+  
+label.file:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+
+
+.very-weak {
+    width: 5%;
+    background: var(--c-dark-blue);
+}
+
+.weak {
+    width: 30%;
+    background: var(--c-error);
+}
+
+.average {
+    width: 60%;
+    background: var(--c-warning);
+}
+
+.strong {
+    width: 80%;
+    background: var(--c-success);
+}
+
+.very-strong {
+    width: 100%;
+    background: var(--c-blue);
+}
+
+
+
+
+
+form .password-force .password-pourcent {
+    margin: 5px auto;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+form .password-force .password-pourcent span {
+    display: block;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+form .password-force .password-label {
+    color: var(--c-blue);
+}
+
+
+form .div-input {
+    position: relative;
+}
+
+form .div-input .material-icons-outlined, .chiffre {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+
+
+.panel {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.cards {
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cards a {
+    color: #1A1B2D;
+}
+
+.card {
+    width: 280px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background: var(--c-blue);
+    z-index: 7;
+    background: url(../images/public/card.png);
+    padding: 1rem;
+    box-shadow: 5px 5px 20px rgba(153, 153, 153, 0.4);
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-style: normal;
+    position: relative;
+    color: #1A1B2D;
+}
+
+.card h2{
+    font-weight: 600;
+    font-size: 25px;
+    z-index: 7;
+}
+
+.card h5.prof {
+    font-weight: 600;
+    font-size: 13px;
+    color: #444444;
+    z-index: 7;
+    transition: all 300ms ease-in-out;
+}
+
+.card h5.count {
+    margin: 40px auto 0;
+    width: 100%;
+    font-weight: 600;
+    display: flex;
+    font-size: 40px;
+    z-index: 7;
+    align-items: center;
+    color: #444444;
+    transition: all 300ms ease-in-out;
+}
+
+.card h5.count span {
+    font-size: 15px;
+}
+
+.card:hover {
+    box-shadow: none;
+    background: #3246D3;
+    background: url(../images/public/card_hover.png);
+    color: #fff;
+    transition: all 300ms ease-in-out;
+}
+
+.card:hover h5.prof, .card:hover h5.count {
+    color: #fff;
+    transition: all 300ms ease-in-out;
+}
+
+
+.stats {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    gap: 50px;
+}
+
+#myChart {
+    width: 100% !important;
+    height: 350px !important;
+}
+
+#myChart2 {
+    width: 100% !important;
+    height: 350px !important;
+}
+
+.popup {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1a1b2daf;
+    z-index: 99;
+    padding: 1rem;
+}
+
+.pop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 20px rgba(153, 153, 153, 0.4);
+}
+
+.pop input {
+    width: 100%;
+    margin: 15px auto;
+}
+
+.admissions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1300px;
+    height: 100%;
+    gap: 10px;
+}
+
+.admissions .ligne {
+    margin: 5px auto 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 20px;
+    align-items: center;
+    padding: 1rem;
+    min-height: 100px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 20px rgba(153, 153, 153, 0.2);
+}
+
+.admissions .ligne a {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-blue);
+    color: white;
+}
+
+.admissions .ligne form {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.liste_admissions {
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.admissions_carte {
+    width: 300px;
+    height: 250px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 20px rgba(153, 153, 153, 0.2);
+}
+
+.admissions_carte .boutons {
+    margin: 50px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.admissions_carte .boutons a {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-blue);
+    color: white;
+}

@@ -1,0 +1,172 @@
+@import url('initialisations.css');
+
+.left {
+    margin: auto;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--c-background);
+}
+
+.left .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.left .logo span {
+    background: var(--c-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.left form {
+    margin: auto;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.left form h1 {
+    color: var(--c-dark-blue);
+    font-size: max(2.3vw, 18px);
+}
+
+.left form label {
+    margin: 20px 0 0 0;
+    font-weight: 400;
+}
+
+.left form p {
+    color: var(--c-blue);
+}
+
+.left form a {
+    font-size: 15px;
+    width: max-content;
+    text-decoration: underline;
+}
+
+.left form #identifiant, #password, #mail, #captcha {
+    margin: 10px auto;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(153, 153, 153, 0.25);
+}
+
+@keyframes shake {
+    25% {
+        transform: translateX(8px);
+    }
+    50% {
+        transform: translateX(-8px);
+    }
+    75% {
+        transform: translateX(8px);
+    }
+}
+
+.left form .div-input #captcha:invalid {
+    animation: shake 300ms;
+}
+
+.left form .password-force .password-pourcent {
+    margin: 5px auto;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.left form .password-force .password-pourcent span {
+    display: block;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+.left form .password-force .password-label {
+    color: var(--c-blue);
+}
+
+
+.left form .div-input {
+    position: relative;
+}
+
+.left form .div-input .material-icons-outlined, .chiffre {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.left form .div-input .captcha {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    display: flex;
+    transform: translateY(-50%);
+    background-color: var(--c-blue);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    color: white;
+    text-decoration: line-through;
+}
+
+.left form input[type='submit'] {
+    margin: 40px 0 10px 0;
+    display: flex;
+    width: 100%;
+    height: 55px;
+    background-color: white;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background: var(--c-blue);
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.right {
+    margin: auto;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: var(--c-blue);
+}
+
+.right img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+@media (max-width:860px) {
+    .right {
+        display: none;
+    }
+
+    .left form {
+        width: 90%;
+    }
+}
